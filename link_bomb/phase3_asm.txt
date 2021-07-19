@@ -1,0 +1,56 @@
+
+phase3.o：     文件格式 elf32-i386
+
+
+Disassembly of section .text:
+
+00000000 <do_phase>:
+   0:	55                   	push   %ebp
+   1:	89 e5                	mov    %esp,%ebp
+   3:	53                   	push   %ebx
+   4:	83 ec 24             	sub    $0x24,%esp
+   7:	e8 fc ff ff ff       	call   8 <do_phase+0x8>
+   c:	81 c3 02 00 00 00    	add    $0x2,%ebx
+  12:	65 a1 14 00 00 00    	mov    %gs:0x14,%eax
+  18:	89 45 f4             	mov    %eax,-0xc(%ebp)
+  1b:	31 c0                	xor    %eax,%eax
+  1d:	c7 45 e9 6a 63 75 70 	movl   $0x7075636a,-0x17(%ebp)
+  24:	c7 45 ed 74 76 62 67 	movl   $0x67627674,-0x13(%ebp)
+  2b:	66 c7 45 f1 7a 68    	movw   $0x687a,-0xf(%ebp)
+  31:	c6 45 f3 00          	movb   $0x0,-0xd(%ebp)
+  35:	c7 45 e4 00 00 00 00 	movl   $0x0,-0x1c(%ebp)
+  3c:	eb 2b                	jmp    69 <do_phase+0x69>
+  3e:	8d 55 e9             	lea    -0x17(%ebp),%edx
+  41:	8b 45 e4             	mov    -0x1c(%ebp),%eax
+  44:	01 d0                	add    %edx,%eax
+  46:	0f b6 00             	movzbl (%eax),%eax
+  49:	0f b6 c0             	movzbl %al,%eax
+  4c:	8b 93 00 00 00 00    	mov    0x0(%ebx),%edx
+  52:	0f b6 04 02          	movzbl (%edx,%eax,1),%eax
+  56:	0f be c0             	movsbl %al,%eax
+  59:	83 ec 0c             	sub    $0xc,%esp
+  5c:	50                   	push   %eax
+  5d:	e8 fc ff ff ff       	call   5e <do_phase+0x5e>
+  62:	83 c4 10             	add    $0x10,%esp
+  65:	83 45 e4 01          	addl   $0x1,-0x1c(%ebp)
+  69:	8b 45 e4             	mov    -0x1c(%ebp),%eax
+  6c:	83 f8 09             	cmp    $0x9,%eax
+  6f:	76 cd                	jbe    3e <do_phase+0x3e>
+  71:	83 ec 0c             	sub    $0xc,%esp
+  74:	6a 0a                	push   $0xa
+  76:	e8 fc ff ff ff       	call   77 <do_phase+0x77>
+  7b:	83 c4 10             	add    $0x10,%esp
+  7e:	90                   	nop
+  7f:	8b 45 f4             	mov    -0xc(%ebp),%eax
+  82:	65 33 05 14 00 00 00 	xor    %gs:0x14,%eax
+  89:	74 05                	je     90 <do_phase+0x90>
+  8b:	e8 fc ff ff ff       	call   8c <do_phase+0x8c>
+  90:	8b 5d fc             	mov    -0x4(%ebp),%ebx
+  93:	c9                   	leave  
+  94:	c3                   	ret    
+
+Disassembly of section .text.__x86.get_pc_thunk.bx:
+
+00000000 <__x86.get_pc_thunk.bx>:
+   0:	8b 1c 24             	mov    (%esp),%ebx
+   3:	c3                   	ret    

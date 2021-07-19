@@ -1,0 +1,11 @@
+
+getcode.o：     文件格式 elf32-i386
+
+
+Disassembly of section .text:
+
+00000000 <.text>:
+   0:	8d 80 a8 e0 ff ff    	lea    -0x1f58(%eax),%eax
+   6:	50                   	push   %eax
+   7:	e8 fc ff ff ff       	call   0x8
+   c:	58                   	pop    %eax

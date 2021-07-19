@@ -1,0 +1,8 @@
+
+phase2.o：     文件格式 elf32-i386
+
+
+Disassembly of section .text:
+
+00000000 <.text>:
+   0:	68 7c 70 55 56       	push   $0x5655707c
